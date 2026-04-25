@@ -1,10 +1,12 @@
 'use client'
+import { authClient } from '@/lib/auth-client';
+
 import Link from 'next/link';
 import React from 'react';
 
 const RegisterPage = () => {
 
-   const handleRegister = (e) => {
+   const handleRegister = async(e) => {
       e.preventDefault();
       const name = e.target.name.value;
       const photo = e.target.photourl.value;
@@ -12,8 +14,17 @@ const RegisterPage = () => {
       const password = e.target.password.value;
       
       console.log({ name, photo, email, password });
-      // Akhane apni Firebase ba Auth logic likhte parben
-   }
+      const {data, error} =await authClient.signUp.email({
+        name: name, 
+        email: email, 
+        password: password, 
+     //   image: photo,
+        callbackURL: "/",
+      })
+      console.log( data, error)
+      }
+
+
 
     return (
       <div className='min-h-screen bg-gray-100 flex justify-center items-center p-4'>
