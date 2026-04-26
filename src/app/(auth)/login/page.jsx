@@ -1,5 +1,5 @@
 'use client'
-import { authClient } from '@/lib/auth-client'; // আপনার auth-client এর পাথ অনুযায়ী ঠিক করে নিন
+import { authClient } from '@/lib/auth-client'; 
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 const LoginPage = () => {
    const [loading, setLoading] = useState(false);
    const router = useRouter();
-
+   const [isShowPassword, setIsShowPassword]=useState(false)
    const handleLogin = async (e) => {
       e.preventDefault();
       setLoading(true);
@@ -66,7 +66,7 @@ const LoginPage = () => {
                   <label className='block text-sm font-medium text-gray-700'>Password</label>
                   <input 
                      name='password'
-                     type="password" 
+                     type={isShowPassword? 'text': 'password' } 
                      required
                      disabled={loading}
                      className='w-full p-3 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:bg-gray-50'
