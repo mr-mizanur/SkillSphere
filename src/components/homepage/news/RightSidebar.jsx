@@ -8,7 +8,7 @@ const RightSidebar = () => {
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/", // Where to redirect after login
+      callbackURL: "/", 
     });
   };
 
