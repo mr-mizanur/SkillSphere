@@ -1,6 +1,8 @@
 import Hero from "@/components/homepage/Hero";
 import PopularCourses from "@/components/homepage/PopularCourses";
 import React from "react";
+import AboutUsPage from "./about-us/page";
+import ContactPage from "./contact/page";
 
 const Home = () => {
   return (
@@ -18,6 +20,8 @@ const Home = () => {
         </p>
       </section>
       <PopularCourses />
+      <AboutUsPage></AboutUsPage>
+      <ContactPage></ContactPage>
     </div>
   );
 };

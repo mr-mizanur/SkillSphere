@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     
-                    {/* ব্র্যান্ড সেকশন */}
+            
                     <div className="space-y-4">
                         <Link href="/" className="text-3xl font-black text-white tracking-tighter">
                             Skill<span className="text-purple-500">Sphere</span>
@@ -27,7 +27,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* কুইক লিঙ্কস */}
+                
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-4">
@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* কপিরাইট অংশ */}
+               
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-500">
                         © {new Date().getFullYear()} SkillSphere. All rights reserved.

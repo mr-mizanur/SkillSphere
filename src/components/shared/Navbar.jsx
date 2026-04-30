@@ -27,17 +27,17 @@ const Navbar = () => {
     <nav className="border-b bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 lg:px-0">
         
-        {/* ব্র্যান্ড লোগো */}
+       
         <div className="text-2xl font-black text-purple-600 tracking-tighter">
           <Link href="/">SkillSphere</Link>
         </div>
 
-        {/* নেভিগেশন লিঙ্কসমূহ */}
+      
         <ul className="hidden md:flex items-center text-gray-700 gap-8 font-semibold">
           <li><NavLink href="/">Home</NavLink></li>
           <li><NavLink href="/courses">Courses</NavLink></li>
           
-          {/* প্রোফাইল এবং আপডেট রাউট যোগ করা হয়েছে */}
+        
           {user && (
             <>
               <li><NavLink href="/my-profile">My Profile</NavLink></li>
@@ -48,7 +48,7 @@ const Navbar = () => {
           <li><NavLink href="/about-us">About</NavLink></li>
         </ul>
 
-        {/* ইউজার অ্যাকশন এরিয়া */}
+     
         <div className="flex items-center gap-4">
           {user ? (
             <>
