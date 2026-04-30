@@ -11,7 +11,7 @@ const AboutUsPage = () => {
   
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">About Dragon News</h1>
-        <p className="text-lg text-gray-600 italic">"Journalism Without Fear or Favour"</p>
+        <p className="text-lg text-gray-600 italic">Journalism Without Fear or Favour</p>
         <div className="w-24 h-1 bg-[#D72050] mx-auto mt-4"></div>
       </div>
 
@@ -35,7 +35,7 @@ const AboutUsPage = () => {
 
           <p>
             We believe in the power of information to change lives. Our team of dedicated 
-            journalists works around the clock to ensure you never miss a beat of what's 
+            journalists works around the clock to ensure you never miss a beat of what is 
             happening around the world.
           </p>
         </div>

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch with HTML, CSS, JS and React.",
+    "image": "https://i.ibb.co.com/8LpX9Rz/web-dev.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Mastering UI/UX Design with Figma",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Design stunning user interfaces and create interactive prototypes.",
+    "image": "https://i.ibb.co.com/N6mYv0p/ui-ux.png",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Advanced Python for Data Science",
+    "instructor": "Dr. Alan Turing",
+    "duration": "25 hours",
+    "rating": 4.7,
+    "level": "Advanced",
+    "description": "Master Python libraries like Pandas, NumPy, and Scikit-Learn for data analysis.",
+    "image": "https://i.ibb.co.com/vHq7X0B/python-data.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Sarah Jenkins",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn SEO, SEM, and Social Media Marketing to grow any business online.",
+    "image": "https://i.ibb.co.com/mDkFp4y/digital-marketing.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "Next.js 15 Full Stack Mastery",
+    "instructor": "Zubayer Ahmed",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Build high-performance web applications using Next.js, Auth.js, and Prisma.",
+    "image": "https://i.ibb.co.com/Y7R3xXG/nextjs-course.png",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Cyber Security Fundamentals",
+    "instructor": "Alex Rivera",
+    "duration": "30 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Protect systems and networks from digital attacks with ethical hacking basics.",
+    "image": "https://i.ibb.co.com/PzWfH0S/cyber-security.png",
+    "category": "IT & Software"
+  }
+]

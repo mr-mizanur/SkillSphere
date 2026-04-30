@@ -1,22 +1,19 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+'use client'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-const NavLink = ({ href, className, children }) => {
+const NavLink = ({ href, children }) => {
   const pathname = usePathname();
-  console.log(pathname, "pathname");
-
-  const isActive = href === pathname;
+  const isActive = pathname === href;
 
   return (
-    <Link
-      href={href}
-      className={`${isActive ? "border-b-2 border-b-purple-500" : ""} ${className}`}
+    <Link 
+      href={href} 
+      className={isActive ? "text-purple-600 font-bold" : "hover:text-purple-600"}
     >
       {children}
     </Link>
   );
 };
 
-export default NavLink;
+export default NavLink; 
