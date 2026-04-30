@@ -1,5 +1,7 @@
-"use client"; // Required for using hooks like useState in Next.js App Router
+"use client"; 
 
+
+import { motion } from "motion/react";
 import React, { useState } from 'react';
 import Link from 'next/link';
 

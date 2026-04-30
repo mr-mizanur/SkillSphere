@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import userAvatar from "@/assets/user.png";
-import NavLink from "./NavLink"; // ইমপোর্ট আন-কমেন্ট করা হয়েছে
+import NavLink from "./NavLink"; 
 import { authClient } from "@/lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
 
@@ -16,7 +16,6 @@ const Navbar = () => {
     await authClient.signOut();
   };
 
-  // গুগল সাইন-ইন হ্যান্ডলার
   const handleGoogleSignin = async () => {
     await authClient.signIn.social({
       provider: "google",
@@ -25,19 +24,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-b bg-white shadow-sm">
+    <nav className="border-b bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 lg:px-0">
         
         {/* ব্র্যান্ড লোগো */}
-        <div className="text-2xl font-bold text-purple-600">
+        <div className="text-2xl font-black text-purple-600 tracking-tighter">
           <Link href="/">SkillSphere</Link>
         </div>
 
         {/* নেভিগেশন লিঙ্কসমূহ */}
-        <ul className="hidden md:flex items-center text-gray-700 gap-6 font-medium">
+        <ul className="hidden md:flex items-center text-gray-700 gap-8 font-semibold">
           <li><NavLink href="/">Home</NavLink></li>
           <li><NavLink href="/courses">Courses</NavLink></li>
-          {user && <li><NavLink href="/profile">My Profile</NavLink></li>}
+          
+          {/* প্রোফাইল এবং আপডেট রাউট যোগ করা হয়েছে */}
+          {user && (
+            <>
+              <li><NavLink href="/my-profile">My Profile</NavLink></li>
+              <li><NavLink href="/my-profile/update">Update Info</NavLink></li>
+            </>
+          )}
+          
           <li><NavLink href="/about-us">About</NavLink></li>
         </ul>
 
@@ -46,44 +53,40 @@ const Navbar = () => {
           {user ? (
             <>
               <div className="hidden sm:block text-right">
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Online</p>
-                <p className="text-sm font-semibold">{user.name}</p>
+                <p className="text-[10px] text-green-500 font-bold uppercase tracking-widest">Online</p>
+                <p className="text-sm font-bold text-gray-800">{user.name}</p>
               </div>
               
-              <Link href="/profile">
+              <Link href="/my-profile">
                 <Image 
                   src={user.image || userAvatar} 
                   alt="User avatar" 
                   width={40} 
                   height={40} 
-                  className="rounded-full border-2 border-purple-500 p-0.5 object-cover cursor-pointer hover:scale-105 transition-transform"
+                  className="rounded-full border-2 border-purple-500 p-0.5 object-cover cursor-pointer hover:rotate-6 transition-all"
                 />
               </Link>
 
               <button 
                 onClick={handleLogout} 
-                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="bg-gray-100 hover:bg-red-50 text-red-500 px-4 py-2 rounded-xl text-sm font-bold transition-all border border-transparent hover:border-red-200"
               >
                 Logout
               </button>
             </>
           ) : (
             <div className="flex items-center gap-3">
-              {/* গুগল সাইন-ইন বাটন */}
               <button 
                 onClick={handleGoogleSignin}
-                className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-all shadow-sm"
+                className="flex items-center gap-2 border border-gray-200 px-4 py-2 rounded-xl text-sm font-bold hover:bg-gray-50 transition-all"
               >
                 <FcGoogle size={20} />
-                <span className="hidden sm:inline">Sign in with Google</span>
-                <span className="sm:hidden">Google</span>
+                <span className="hidden lg:inline text-gray-700">Google</span>
               </button>
-
-              <div className="h-6 w-[1px] bg-gray-300 mx-1"></div>
 
               <Link 
                 href="/login" 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all shadow-md"
+                className="bg-purple-600 hover:bg-gray-900 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-purple-200"
               >
                 Login
               </Link>
