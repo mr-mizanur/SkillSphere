@@ -14,3 +14,4 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+// trigger commit: update config context

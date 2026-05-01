@@ -13,3 +13,6 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
+
+// trigger commit: update config context

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { GiPodiumWinner } from 'react-icons/gi';
 
 const Hero = () => {
     const containerVariants = {
@@ -99,7 +100,7 @@ const Hero = () => {
                             className="absolute -top-6 -right-6 bg-white p-5 rounded-3xl shadow-xl hidden md:block"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 text-2xl">🏆</div>
+                                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 text-2xl"><GiPodiumWinner /></div>
                                 <div>
                                     <p className="text-xs text-gray-500 font-bold uppercase tracking-tighter">Best Platform</p>
                                     <p className="font-black text-gray-900">Award 2026</p>

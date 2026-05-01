@@ -6,7 +6,7 @@ import { FaGraduationCap, FaUsers, FaLightbulb, FaAward } from "react-icons/fa";
 import Link from "next/link";
 
 const AboutUsPage = () => {
-  // এনিমেশন ভ্যারিয়েন্ট
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -22,7 +22,7 @@ const AboutUsPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* হিরো সেকশন */}
+     
       <section className="relative py-20 bg-gray-900 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-purple-600 rounded-full blur-[120px]"></div>
@@ -46,7 +46,7 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* স্ট্যাটস সেকশন */}
+    
       <section className="py-12 -mt-16 container mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (
@@ -65,7 +65,7 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* আমাদের লক্ষ্য (Mission) সেকশন */}
+  
       <section className="py-20 container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <motion.div 
