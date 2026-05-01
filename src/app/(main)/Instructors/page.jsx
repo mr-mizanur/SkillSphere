@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
+import Link from 'next/link';
 
 const TopInstructors = () => {
     const instructors = [
@@ -44,9 +45,12 @@ const TopInstructors = () => {
                         <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter italic"> World-Class Mentors</h2>
                         <p className="text-gray-500 mt-4 text-lg">Learn from industry experts who are shaping the future.</p>
                     </div>
-                    <button className="px-8 py-3 border-2 border-gray-900 font-bold rounded-2xl hover:bg-gray-900 hover:text-white transition-all">
-                        View All Mentors
-                    </button>
+                   <Link 
+                     href="/mentors" 
+                     className="px-8 py-3 border-2 border-gray-900 font-bold rounded-2xl hover:bg-gray-900 hover:text-white transition-all"
+                   >
+                       View All Mentors
+                   </Link>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
