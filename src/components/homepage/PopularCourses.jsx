@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import courses from '@/../courses.json';
+import { IoIosStarOutline } from 'react-icons/io';
 
 const PopularCourses = () => {
    
@@ -72,8 +73,8 @@ const PopularCourses = () => {
                                     className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 
-                                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-md px-4 py-1.5 rounded-2xl text-sm font-black text-purple-600 shadow-lg border border-white/20">
-                                    ⭐ {course.rating}
+                                <div className=" flex items-center gap-1 absolute top-4 right-4 bg-white/80 backdrop-blur-md px-4 py-1.5 rounded-2xl text-sm font-black text-purple-600 shadow-lg border border-white/20">
+                                         <IoIosStarOutline /> {course.rating}
                                 </div>
                                 <div className="absolute bottom-4 left-4">
                                     <span className="bg-purple-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-lg">
@@ -105,9 +106,14 @@ const PopularCourses = () => {
                                 >
                                     View Details
                                 </Link>
+
+
+                              
                             </div>
+                             
                         </motion.div>
                     ))}
+                             <Link href='/courses' className="block w-full py-4 bg-gradient-to-r from-purple-600 to-blue-500  text-white text-center font-bold rounded-2xl hover:bg-purple-600 transform active:scale-95 transition-all duration-300 shadow-lg hover:shadow-purple-200">Our All Courses</Link>
                 </motion.div>
             </div>
         </section>

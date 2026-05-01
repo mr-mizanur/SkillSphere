@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import courses from '@/../courses.json';
+import { IoIosStarOutline } from "react-icons/io";
 
 const AllCoursesPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -90,10 +91,10 @@ const AllCoursesPage = () => {
                                                 {course.category}
                                             </span>
                                             <span className="text-yellow-500 font-bold text-sm flex items-center gap-1">
-                                                ⭐ {course.rating}
+                                                <IoIosStarOutline /> {course.rating}
                                             </span>
                                         </div>
-                                        <h2 className="text-xl font-black text-gray-900 mb-3 h-14 line-clamp-2 leading-tight">
+                                        <h2 className=" items-center text-xl font-black text-gray-900 mb-3 h-14 line-clamp-2 leading-tight">
                                             {course.title}
                                         </h2>
                                         <p className="text-gray-500 text-sm mb-6">

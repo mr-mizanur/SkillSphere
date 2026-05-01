@@ -7,17 +7,16 @@ const CourseDetailsPage = () => {
     const router = useRouter();
     const { id } = useParams();
     
-    // ১. আপনার Auth লজিক (এখানে উদাহরণ হিসেবে null ধরা হয়েছে)
-    // যখন আপনি Firebase বা অন্য Auth সেট করবেন, তখন এখান থেকে ইউজার পাবেন।
-    const user = true; // লগইন চেক করার জন্য এটি ব্যবহার করুন (যেমন: const {user} = useAuth())
+   
+    const user = true; /
 
-    // ২. কোর্স খুঁজে বের করা
+
     const course = courses.find(c => c.id === parseInt(id));
 
-    // ৩. প্রোটেকটেড রাউট লজিক
+  
     useEffect(() => {
         if (!user) {
-            // লগইন না থাকলে লগইন পেজে পাঠাবে এবং বর্তমান পাথ মনে রাখবে
+           
             router.push(`/login?redirect=/course/${id}`);
         }
     }, [user, id, router]);
@@ -34,7 +33,7 @@ const CourseDetailsPage = () => {
         <section className="py-16 bg-white min-h-screen">
             <div className="container mx-auto px-4 max-w-5xl">
                 
-                {/* হিরো অংশ */}
+               
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <img 
                         src={course.image} 
@@ -70,7 +69,7 @@ const CourseDetailsPage = () => {
                     </div>
                 </div>
 
-                {/* কারিকুলাম অংশ (Static List) */}
+           
                 <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100">
                     <h2 className="text-3xl font-bold text-gray-900 mb-8">Course Curriculum</h2>
                     <div className="space-y-4">
