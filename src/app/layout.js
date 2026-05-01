@@ -16,8 +16,8 @@ export const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Dragon News",
-  description: "Best news portal in Bangladesh",
+  title: "SkillSphere ",
+  description: "Unlock Your Potential with SkillSphere",
 };
 
 export default function RootLayout({ children }) {

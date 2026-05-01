@@ -48,7 +48,7 @@ const RegisterPage = () => {
                     />
                 </div>
 
-                {/* Photo URL Field */}
+         
                 <div>
                     <label className='block text-sm font-medium text-gray-700'>Photo URL</label>
                     <input name='photourl' type="url" required
@@ -57,7 +57,7 @@ const RegisterPage = () => {
                     />
                 </div>
 
-                {/* Email Field */}
+           
                 <div>
                     <label className='block text-sm font-medium text-gray-700'>Email Address</label>
                     <input name='email' type="email" required
@@ -75,7 +75,7 @@ const RegisterPage = () => {
                     />
                 </div>
 
-                <button type="submit" className='w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition'>
+                <button type="submit" className='w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition'>
                     Register
                 </button>
             </form>

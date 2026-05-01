@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-4 px-4 lg:px-0">
         
        
-        <div className="text-2xl font-black text-purple-600 tracking-tighter">
+        <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 tracking-tighter">
           <Link href="/">SkillSphere</Link>
         </div>
 

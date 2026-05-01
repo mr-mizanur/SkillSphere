@@ -13,8 +13,8 @@ const Footer = () => {
                     
             
                     <div className="space-y-4">
-                        <Link href="/" className="text-3xl font-black text-white tracking-tighter">
-                            Skill<span className="text-purple-500">Sphere</span>
+                        <Link href="/" className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 tracking-tighter">
+                            SkillSphere
                         </Link>
                         <p className="text-gray-400 leading-relaxed mt-4">
                             Empowering learners worldwide with premium quality courses and industry-leading mentors. Start your journey today.

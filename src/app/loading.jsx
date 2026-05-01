@@ -3,8 +3,15 @@ import React from "react";
 const LoadingPage = () => {
   return (
     <div className="flex h-[85vh] items-center justify-center">
-      Global loading
-      <span className="loading loading-dots loading-xl"></span>
+      
+     <span className="loading loading-spinner text-primary"></span>
+     <span className="loading loading-spinner text-secondary"></span>
+     <span className="loading loading-spinner text-accent"></span>
+     <span className="loading loading-spinner text-neutral"></span>
+     <span className="loading loading-spinner text-info"></span>
+     <span className="loading loading-spinner text-success"></span>
+     <span className="loading loading-spinner text-warning"></span>
+     <span className="loading loading-spinner text-error"></span>
     </div>
   );
 };
