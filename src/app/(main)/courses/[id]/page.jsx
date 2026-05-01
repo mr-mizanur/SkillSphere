@@ -8,7 +8,7 @@ const CourseDetailsPage = () => {
     const { id } = useParams();
     
    
-    const user = true; /
+    const user = true; 
 
 
     const course = courses.find(c => c.id === parseInt(id));

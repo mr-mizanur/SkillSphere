@@ -3,6 +3,9 @@ import PopularCourses from "@/components/homepage/PopularCourses";
 import React from "react";
 import AboutUsPage from "./about-us/page";
 import ContactPage from "./contact/page";
+import LearningTips from "./tips/page";
+import TopInstructors from "./Instructors/page";
+
 
 const Home = () => {
   return (
@@ -21,6 +24,8 @@ const Home = () => {
       </section>
       <PopularCourses />
       <AboutUsPage></AboutUsPage>
+      <LearningTips />
+      <TopInstructors />
       <ContactPage></ContactPage>
     </div>
   );

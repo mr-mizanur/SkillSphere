@@ -13,7 +13,7 @@ const ContactPage = () => {
     return (
         <section className="min-h-screen bg-white py-20">
             <div className="container mx-auto px-4">
-                {/* হেডার এনিমেশন */}
+             
                 <motion.div 
                     initial="hidden"
                     whileInView="visible"
@@ -31,7 +31,7 @@ const ContactPage = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                     
-                    {/* কন্টাক্ট ইনফো কার্ডস */}
+                    
                     <motion.div 
                         initial="hidden"
                         whileInView="visible"
@@ -66,7 +66,7 @@ const ContactPage = () => {
                         </div>
                     </motion.div>
 
-                    {/* কন্টাক্ট ফর্ম */}
+                    
                     <motion.div 
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ const ContactPage = () => {
                         viewport={{ once: true }}
                         className="lg:col-span-2 bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-gray-100 relative overflow-hidden"
                     >
-                        {/* ব্যাকগ্রাউন্ড ডেকোরেশন */}
+                        
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
 
                         <h2 className="text-3xl font-black text-gray-900 mb-8 italic">Send a Message</h2>
