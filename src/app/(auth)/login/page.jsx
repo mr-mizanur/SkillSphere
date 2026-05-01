@@ -4,10 +4,14 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const LoginPage = () => {
    const [loading, setLoading] = useState(false);
    const router = useRouter();
-   const [isShowPassword, setIsShowPassword]=useState(false)
+   const [isShowPassword, setIsShowPassword] = useState(false);
+
    const handleLogin = async (e) => {
       e.preventDefault();
       setLoading(true);
@@ -19,19 +23,25 @@ const LoginPage = () => {
          const { data, error } = await authClient.signIn.email({
             email: email,
             password: password,
-            rememberMe:true,
+            rememberMe: true,
             callbackURL: "/", 
-
          });
-          console.log( data, error)
+
          if (error) {
-            alert(error.message || "Login failed. Please check your credentials.");
+           
+            toast.error(error.message || "Login failed. Please check your credentials.");
          } else {
-            console.log("Logged in successfully:", data);
-            router.push('/');
+            
+            toast.success("Logged in successfully! Redirecting...");
+            
+            setTimeout(() => {
+               router.push('/');
+               router.refresh();
+            }, 2000);
          }
       } catch (err) {
-         console.error("An unexpected error occurred:", err);
+         toast.error("An unexpected error occurred.");
+         console.error(err);
       } finally {
          setLoading(false);
       }
@@ -39,6 +49,9 @@ const LoginPage = () => {
 
    return (
       <div className='min-h-screen bg-gray-100 flex justify-center items-center p-4'>
+        
+         <ToastContainer position="top-right" autoClose={3000} />
+
          <div className='w-full max-w-md p-8 bg-white rounded-2xl shadow-lg'>
             
             <div className='flex justify-center mb-6'>
@@ -62,22 +75,30 @@ const LoginPage = () => {
                   />
                </div>
 
-               <div>
+               <div className='relative'>
                   <label className='block text-sm font-medium text-gray-700'>Password</label>
                   <input 
                      name='password'
-                     type={isShowPassword? 'text': 'password' } 
+                     type={isShowPassword ? 'text' : 'password'} 
                      required
                      disabled={loading}
                      className='w-full p-3 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:bg-gray-50'
                      placeholder='••••••••'
                   />
+            
+                  <button 
+                     type="button"
+                     onClick={() => setIsShowPassword(!isShowPassword)}
+                     className='absolute right-3 top-10 text-xs font-semibold text-gray-500 hover:text-blue-600'
+                  >
+                     {isShowPassword ? 'HIDE' : 'SHOW'}
+                  </button>
                </div>
 
                <button 
                   type="submit" 
                   disabled={loading}
-                  className='w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition disabled:bg-blue-400'
+                  className='w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white p-3 rounded-lg font-semibold hover:opacity-90 transition disabled:bg-blue-400'
                >
                   {loading ? 'Logging in...' : 'Login'}
                </button>
